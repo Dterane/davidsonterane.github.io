@@ -1,188 +1,363 @@
 <!DOCTYPE html>
-<html lang="in">
+<html lang="ht">
 <head>
-  <!-- Charset + Responsive Setup -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ✅ SEO META Tags -->
+  
+  <!-- SEO META Tags -->
   <meta name="description" content="Sit ofisyèl Davidson Terane – Devlopè VS Code Extension, app mobil ak Stripe API. Aprann dev ak pwojè avanse sou GitHub Pages." />
   <meta name="keywords" content="Davidson Terane, VS Code Extension, Flutter, Stripe API, Funbets, NativeVPN, Rosario, Dev Ayiti, GitHub Pages" />
   <meta name="author" content="Davidson Terane" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="HT" />
 
-  <!-- ✅ Open Graph Tags (Facebook, LinkedIn, WhatsApp Preview) -->
+  <!-- Open Graph Tags (Facebook, LinkedIn, WhatsApp Preview) -->
   <meta property="og:title" content="Davidson Terane – Dev VS Code & Flutter" />
   <meta property="og:description" content="Aprann VS Code Extensions, Flutter, Stripe API & antreprenarya teknik ak Davidson." />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/111145512?v=4" />
   <meta property="og:url" content="https://davidsonterane.com" />
   <meta property="og:type" content="website" />
 
-  <!-- ✅ Twitter Card (si ou ta pataje li sou Twitter) -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Davidson Terane – Dev VS Code & Flutter" />
   <meta name="twitter:description" content="Aprann dev ak pwojè avanse sou VS Code, Flutter, Stripe ak plis ankò." />
   <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/111145512?v=4" />
 
-  <!-- ✅ Favicon (optional: mete ou ka mete logo pèsonèl pita) -->
-  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/111145512?v=4" />
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/111145512?v=4" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/111145512?v=4" />
 
-  <!-- ✅ Titre paj ou -->
   <title>Aprann Dev Avèk Davidson Terane</title>
 
-  <!-- ✅ Ajoute CSS lokal oswa ekstèn ou si ou genyen -->
-  <!-- <link rel="stylesheet" href="style.css" /> -->
-    </head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aprann Dev Avèk Davidson Terane</title>
   <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f8fafc;
       color: #1f2937;
+      line-height: 1.6;
+      scroll-behavior: smooth;
     }
+    a {
+      color: #0ea5e9;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #0284c7;
+      outline: none;
+    }
+
+    /* Navbar */
+    nav {
+      background: #0284c7;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+    }
+    nav ul li {
+      font-weight: bold;
+      font-size: 1em;
+    }
+    nav ul li a {
+      color: white;
+      font-weight: 600;
+      font-size: 1.1em;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+    nav ul li a:hover, nav ul li a:focus {
+      background: #0ea5e9;
+      color: white;
+    }
+
+    /* Header */
     header {
       background: linear-gradient(135deg, #0ea5e9, #0284c7);
       color: white;
-      padding: 60px 20px;
+      padding: 80px 20px 60px;
       text-align: center;
+      position: relative;
     }
     header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 100%;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
       border: 3px solid white;
       object-fit: cover;
       margin-bottom: 15px;
+      box-shadow: 0 0 15px rgba(255 255 255 / 0.5);
     }
     header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      font-size: 3em;
+      margin: 0 0 10px;
+      font-weight: 700;
     }
     header p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: 0 auto 20px;
+      font-size: 1.3em;
+      max-width: 650px;
+      margin: 0 auto 25px;
+      font-weight: 400;
     }
-    .btn {
-      display: inline-block;
+    .btn-primary {
       background: white;
       color: #0ea5e9;
-      padding: 12px 24px;
-      margin: 10px;
-      border-radius: 8px;
+      padding: 14px 28px;
+      margin: 0 10px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1.1em;
+      display: inline-block;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(14,165,233,0.5);
+      transition: background 0.3s ease, color 0.3s ease;
       text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease-in-out;
     }
-    .btn:hover {
+    .btn-primary:hover, .btn-primary:focus {
       background: #e0f2fe;
+      color: #0284c7;
+      outline: none;
     }
+
+    /* Sections */
     section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    .courses, .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: 0 auto;
+    }
+    h2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.2em;
+      margin-bottom: 35px;
+      color: #0ea5e9;
+    }
+
+    /* Courses grid */
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
     .card {
       background: white;
       padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      text-align: left;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
     .card h3 {
       color: #0ea5e9;
       margin-top: 0;
+      font-size: 1.5em;
     }
     .card p {
-      font-size: 0.95em;
+      font-size: 1em;
+      margin-bottom: 15px;
+      color: #374151;
+    }
+    .card a.btn-secondary {
+      font-weight: 600;
+      font-size: 1em;
+      color: #0284c7;
+      border: 2px solid #0284c7;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
+    }
+    .card a.btn-secondary:hover, .card a.btn-secondary:focus {
+      background: #0284c7;
+      color: white;
+      outline: none;
+    }
+
+    /* Instructor Section */
+    .instructor {
+      text-align: center;
+      color: #1f2937;
+      margin-top: 40px;
     }
     .instructor img {
-      width: 120px;
-      border-radius: 100%;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid #0ea5e9;
+      object-fit: cover;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(14,165,233,0.5);
+    }
+    .instructor p {
+      font-size: 1.15em;
+      max-width: 700px;
+      margin: 20px auto 0;
+      line-height: 1.5;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
       margin-top: 20px;
     }
+    .testimonial-card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      font-style: italic;
+      color: #374151;
+      position: relative;
+    }
+    .testimonial-card strong {
+      display: block;
+      margin-top: 15px;
+      font-weight: 700;
+      color: #0ea5e9;
+      font-style: normal;
+      text-align: right;
+    }
+
+    /* Footer */
     footer {
       background: #1f2937;
       color: white;
-      padding: 20px;
+      padding: 25px 20px;
       text-align: center;
+      font-size: 0.9em;
+      margin-top: 60px;
     }
-    .social a {
+    footer .social {
+      margin-top: 10px;
+    }
+    footer .social a {
       color: #0ea5e9;
       text-decoration: none;
-      margin: 0 8px;
-      font-weight: bold;
+      margin: 0 12px;
+      font-weight: 600;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+    footer .social a:hover, footer .social a:focus {
+      color: #0284c7;
+      outline: none;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      section {
+        padding: 40px 15px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <img src="https://avatars.githubusercontent.com/u/111145512?v=4" alt="Davidson Terane">
-  <h1>Aprann Dev Avèk Davidson Terane</h1>
-  <p>Yon platfòm pou devlopè ki vle aprann VS Code Extension, Flutter, API Stripe, ak antreprenarya teknik.</p>
-  <a href="mailto:davidsonterane@outlook.com" class="btn">✉️ Kontakte m</a>
-  <a href="https://wa.me/qr/VIMRRJNAAP4AI1" class="btn" target="_blank">📱 WhatsApp</a>
-</header>
+  <!-- Navbar -->
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#courses">Kou</a></li>
+      <li><a href="#instructor">Enstriktè</a></li>
+      <li><a href="#testimonials">Temwayaj</a></li>
+      <li><a href="#contact">Kontakte</a></li>
+    </ul>
+  </nav>
 
-<section>
-  <h2>Kou Rekòmande</h2>
-  <div class="courses">
-    <div class="card">
-      <h3>🏗️ Kreye VS Code Extensions</h3>
-      <p>Aprann etap pa etap kijan pou devlope, teste, e pibliye ekstansyon VS Code ou pa w.</p>
-      <a href="#" class="btn">Gade Kou a</a>
-    </div>
-    <div class="card">
-      <h3>📱 Flutter Pou Applike Natif</h3>
-      <p>Antre rapid nan devlopman mobil ak Flutter. Kòmanse ak UI, API, ak deploy sou Android/iOS.</p>
-      <a href="#" class="btn">Gade Kou a</a>
-    </div>
-    <div class="card">
-      <h3>💳 Stripe & Sèvis Abònman</h3>
-      <p>Gid konplè pou konekte Stripe Checkout, mete webhook, verifye aksè sou backend ak app.</p>
-      <a href="#" class="btn">Gade Kou a</a>
-    </div>
-  </div>
-</section>
+  <!-- Header -->
+  <header role="banner">
+    <img src="https://avatars.githubusercontent.com/u/111145512?v=4" alt="Foto Davidson Terane" />
+    <h1>Aprann Dev Avèk Davidson Terane</h1>
+    <p>Yon platfòm pou devlopè ki vle aprann VS Code Extension, Flutter, API Stripe, ak antreprenarya teknik.</p>
+    <a href="mailto:davidsonterane@outlook.com" class="btn-primary" aria-label="Kontakte Davidson pa Imèl">✉️ Kontakte m</a>
+    <a href="https://wa.me/qr/VIMRRJNAAP4AI1" class="btn-primary" target="_blank" rel="noopener" aria-label="Kontakte Davidson sou WhatsApp">📱 WhatsApp</a>
+  </header>
 
-<section class="instructor">
-  <h2>Sou Enstriktè a</h2>
-  <p>Davidson Terane se yon devlopè ak vizyon antreprenè ki bati app tankou Funbets, Rosario, ak NativeVPN. Eksperyans li travèse API, sekirite, ak aplikasyon echèl mondyal.</p>
-  <img src="https://avatars.githubusercontent.com/u/111145512?v=4" alt="Davidson Terane">
-</section>
-
-<section>
-  <h2>Temwayaj</h2>
-  <div class="testimonials">
-    <div class="card">
-      <p>“Kou Stripe la sove startup mwen an. Kounya mwen ka verifye kliyan otomatik!”</p>
-      <strong>— J. Jean, CTO nan AyitiPay</strong>
+  <!-- Kou Seksyon -->
+  <section id="courses" aria-labelledby="courses-title">
+    <h2 id="courses-title">Kou Rekòmande</h2>
+    <div class="courses">
+      <article class="card" tabindex="0" aria-label="Kou Kreye VS Code Extensions">
+        <h3>🏗️ Kreye VS Code Extensions</h3>
+        <p>Aprann etap pa etap kijan pou devlope, teste, e pibliye ekstansyon VS Code ou pa w.</p>
+        <a href="#" class="btn-secondary" aria-label="Gade Kou Kreye VS Code Extensions">Gade Kou a</a>
+      </article>
+      <article class="card" tabindex="0" aria-label="Kou Flutter Pou Applike Natif">
+        <h3>📱 Flutter Pou Applike Natif</h3>
+        <p>Antre rapid nan devlopman mobil ak Flutter. Kòmanse ak UI, API, ak deploy sou Android/iOS.</p>
+        <a href="#" class="btn-secondary" aria-label="Gade Kou Flutter Pou Applike Natif">Gade Kou a</a>
+      </article>
+      <article class="card" tabindex="0" aria-label="Kou Stripe & Sèvis Abònman">
+        <h3>💳 Stripe & Sèvis Abònman</h3>
+        <p>Gid konplè pou konekte Stripe Checkout, mete webhook, verifye aksè sou backend ak app.</p>
+        <a href="#" class="btn-secondary" aria-label="Gade Kou Stripe & Sèvis Abònman">Gade Kou a</a>
+      </article>
     </div>
-    <div class="card">
-      <p>“Mwen lanse pwòp ekstansyon mwen an nan VS Code gras a gid Davidson lan.”</p>
-      <strong>— M. Alexis, Dev Endepandan</strong>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  &copy; 2025 Davidson Terane. Tout dwa rezève. <br />
-  <div class="social">
-    <a href="https://github.com/Dterane" target="_blank">GitHub</a>
-    <a href="https://facebook.com/TeraneDavidson" target="_blank">Facebook</a>
-    <a href="https://instagram.com/davidson.terane" target="_blank">Instagram</a>
-  </div>
-</footer>
+  <!-- Enstriktè -->
+  <section id="instructor" class="instructor" aria-labelledby="instructor-title">
+    <h2 id="instructor-title">Sou Enstriktè a</h2>
+    <p>Davidson Terane se yon devlopè ak vizyon antreprenè ki bati app tankou Funbets, Rosario, ak NativeVPN. Eksperyans li travèse API, sekirite, ak aplikasyon echèl mondyal.</p>
+    <img src="https://avatars.githubusercontent.com/u/111145512?v=4" alt="Foto Davidson Terane" />
+  </section>
+
+  <!-- Temwayaj -->
+  <section id="testimonials" aria-labelledby="testimonials-title">
+    <h2 id="testimonials-title">Temwayaj</h2>
+    <div class="testimonials">
+      <blockquote class="testimonial-card" tabindex="0">
+        <p>“Kou Stripe la sove startup mwen an. Kounya mwen ka verifye kliyan otomatik!”</p>
+        <strong>— J. Jean, CTO nan AyitiPay</strong>
+      </blockquote>
+      <blockquote class="testimonial-card" tabindex="0">
+        <p>“Mwen lanse pwòp ekstansyon mwen an nan VS Code gras a gid Davidson lan.”</p>
+        <strong>— M. Alexis, Dev Endepandan</strong>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Kontakte -->
+  <section id="contact" aria-labelledby="contact-title" style="text-align:center; padding: 60px 20px;">
+    <h2 id="contact-title">Kontakte Mwen</h2>
+    <p>Ou ka kontakte m dirèkteman via imel oswa WhatsApp.</p>
+    <a href="mailto:davidsonterane@outlook.com" class="btn-primary" aria-label="Voye yon imel bay Davidson">✉️ Imèl</a>
+    <a href="https://wa.me/qr/VIMRRJNAAP4AI1" class="btn-primary" target="_blank" rel="noopener" aria-label="Kontakte Davidson sou WhatsApp">📱 WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Davidson Terane. Tout dwa rezève.<br />
+    <div class="social" role="contentinfo" aria-label="Rezo Sosyal">
+      <a href="https://github.com/Dterane" target="_blank" rel="noopener" aria-label="GitHub Davidson Terane">GitHub</a>
+      <a href="https://facebook.com/TeraneDavidson" target="_blank" rel="noopener" aria-label="Facebook Davidson Terane">Facebook</a>
+      <a href="https://instagram.com/davidson.terane" target="_blank" rel="noopener" aria-label="Instagram Davidson Terane">Instagram</a>
+    </div>
+  </footer>
 
 </body>
   </html>
