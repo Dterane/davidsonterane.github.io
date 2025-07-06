@@ -3,196 +3,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Davidson TERANE</title>
+  <meta name="description" content="I don’t have a boss; I’m a freelancer — I sell my skills and passion in the global marketplace!">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/111145512?v=4" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <style>
+    :root {
+      --primary: #0ea5e9;
+      --primary-dark: #0284c7;
+      --background: #f9fafb;
+      --text: #1f2937;
+      --footer: #1f2937;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f9fafb;
-      color: #1f2937;
+      background: var(--background);
+      color: var(--text);
+      scroll-behavior: smooth;
     }
     header {
-      background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
     header img {
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       border: 3px solid white;
       margin-bottom: 15px;
     }
+    header h1 {
+      font-size: 1.8em;
+      margin: 10px 0;
+    }
+    header p {
+      font-size: 1em;
+      margin: 10px 0;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     nav {
       display: flex;
       justify-content: center;
-      align-items: center;
       background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: relative;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 30px;
+      list-style: none;
+      gap: 20px;
       padding: 10px 20px;
       margin: 0;
     }
-    nav ul li a {
+    nav a {
       text-decoration: none;
-      color: #0284c7;
+      color: var(--primary-dark);
       font-weight: 600;
-    }
-    .lang-switcher {
-      position: absolute;
-      right: 20px;
-    }
-    .lang-switcher button {
-      background: transparent;
-      border: none;
-      color: #0284c7;
-      font-weight: 600;
-      cursor: pointer;
-      margin-left: 10px;
       font-size: 1em;
     }
+    section {
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
     .btn-primary {
-      background: #0ea5e9;
+      background: var(--primary);
       color: white;
       padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
       display: inline-block;
-      margin: 10px;
+      transition: background 0.3s;
     }
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #0ea5e9;
-      text-align: center;
-      margin-bottom: 30px;
+    .btn-primary:hover {
+      background: var(--primary-dark);
     }
     footer {
-      background: #1f2937;
+      background: var(--footer);
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px 10px;
     }
     .social a {
-      margin: 0 10px;
-      color: #0ea5e9;
+      color: var(--primary);
+      margin: 0 8px;
       text-decoration: none;
       font-weight: 600;
     }
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      border-radius: 12px;
-    }
   </style>
 </head>
-<body>
-  <nav>
+<body>  <nav>
     <ul>
-      <li><a href="#accueil" data-i18n="menu.home">Accueil</a></li>
-      <li><a href="#courses" data-i18n="menu.courses">Kou</a></li>
-      <li><a href="#videos" data-i18n="menu.videos">Videyo</a></li>
-      <li><a href="#contact" data-i18n="menu.contact">Kontakte</a></li>
+      <li><a href="#home">Akèy</a></li>
+      <li><a href="#courses">Kou</a></li>
+      <li><a href="#videos">Videyo</a></li>
+      <li><a href="#contact">Kontakte</a></li>
     </ul>
-    <div class="lang-switcher">
-      <button onclick="setLang('ht')">HT</button>
-      <button onclick="setLang('en')">EN</button>
-      <button onclick="setLang('fr')">FR</button>
-    </div>
-  </nav>  <header id="accueil">
-    <img src="https://avatars.githubusercontent.com/u/111145512?v=4" alt="Davidson Terane" />
-    <h1 data-i18n="header.name">Davidson Terane</h1>
-    <p data-i18n="header.desc">Dev VS Code Extensions, Flutter & Stripe API – Platfòm Edikasyon pou Devlopè</p>
-    <a href="#" class="btn-primary" data-i18n="header.cv">📄 Telechaje CV</a>
-    <a href="https://www.linkedin.com/in/davidson-terane-260603372" class="btn-primary" target="_blank">🔗 LinkedIn</a>
+  </nav>  <header id="home">
+    <img src="https://avatars.githubusercontent.com/u/111145512?v=4" alt="Davidson TERANE">
+    <h1>Davidson TERANE</h1>
+    <p>I don’t have a boss; I’m a freelancer — I sell my skills and passion in the global marketplace!</p>
+    <a href="#courses" class="btn-primary">Dekouvri Kou</a>
   </header>  <section id="courses">
-    <h2 data-i18n="courses.title">Kou ki disponib</h2>
-    <p data-i18n="courses.text">Aprann VS Code Extensions, Stripe API ak Flutter avèk gid detaye ak demonstrasyon.</p>
+    <h2>Kou ki disponib</h2>
+    <p>Aprann VS Code Extensions, Stripe API, Flutter, ak Devlopman Fullstack avèk kou pratik ak demonstrasyon pwojè reyèl.</p>
+    <a href="#contact" class="btn-primary">Enskri Kou</a>
   </section>  <section id="videos">
-    <h2 data-i18n="videos.title">Videyo sou YouTube</h2>
-    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=davidson.terane"></iframe>
-    <p style="text-align:center;">
-      <a href="https://youtube.com/@davidson.terane?si=KWN-LhvV7PhBttb5" class="btn-primary" target="_blank" data-i18n="videos.button">🔴 Ale sou YouTube</a>
-    </p>
+    <h2>Videyo sou YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLlQWn7wo17t3QgGZnc36oFgsHuVXJXiGb" title="YouTube video playlist Davidson TERANE" frameborder="0" allowfullscreen></iframe>
+    <br><br>
+    <a href="https://youtube.com/@TeraneDavidson" target="_blank" class="btn-primary">Ale sou YouTube</a>
   </section>  <section id="contact">
-    <h2 data-i18n="contact.title">Kontakte mwen</h2>
-    <p data-i18n="contact.desc">Ou ka kontakte mwen sou WhatsApp oswa Imèl</p>
-    <a href="mailto:davidsonterane@outlook.com" class="btn-primary">✉️ Imèl</a>
-    <a href="https://wa.me/qr/VIMRRJNAAP4AI1" class="btn-primary" target="_blank">📱 WhatsApp</a>
+    <h2>Kontakte mwen</h2>
+    <p>Ou ka kontakte mwen sou WhatsApp oswa Imèl pou jwenn aksè rapid ak kou ak sipò teknik pèsonalize.</p>
+    <a href="mailto:davidsonterane@outlook.com" class="btn-primary">Imèl</a>
+    <a href="https://wa.me/qr/VIMRRJNAAP4AI1" class="btn-primary" target="_blank">WhatsApp</a>
   </section>  <footer>
-    &copy; 2025 Davidson Terane. Tout dwa rezève.<br />
+    &copy; 2025 Davidson TERANE. Tout dwa rezève.<br>
     <div class="social">
       <a href="https://github.com/Dterane" target="_blank">GitHub</a>
       <a href="https://facebook.com/TeraneDavidson" target="_blank">Facebook</a>
       <a href="https://instagram.com/davidson.terane" target="_blank">Instagram</a>
     </div>
-  </footer>  <script>
-    const translations = {
-      ht: {
-        "menu.home": "Accueil",
-        "menu.courses": "Kou",
-        "menu.videos": "Videyo",
-        "menu.contact": "Kontakte",
-        "header.name": "Davidson Terane",
-        "header.desc": "Dev VS Code Extensions, Flutter & Stripe API – Platfòm Edikasyon pou Devlopè",
-        "header.cv": "📄 Telechaje CV",
-        "courses.title": "Kou ki disponib",
-        "courses.text": "Aprann VS Code Extensions, Stripe API ak Flutter avèk gid detaye ak demonstrasyon.",
-        "videos.title": "Videyo sou YouTube",
-        "videos.button": "🔴 Ale sou YouTube",
-        "contact.title": "Kontakte mwen",
-        "contact.desc": "Ou ka kontakte mwen sou WhatsApp oswa Imèl"
-      },
-      en: {
-        "menu.home": "Home",
-        "menu.courses": "Courses",
-        "menu.videos": "Videos",
-        "menu.contact": "Contact",
-        "header.name": "Davidson Terane",
-        "header.desc": "VS Code Extensions, Flutter & Stripe API Dev – A Learning Platform for Developers",
-        "header.cv": "📄 Download CV",
-        "courses.title": "Available Courses",
-        "courses.text": "Learn VS Code Extensions, Stripe API and Flutter with detailed guides and demos.",
-        "videos.title": "Videos on YouTube",
-        "videos.button": "🔴 Visit YouTube Channel",
-        "contact.title": "Contact Me",
-        "contact.desc": "You can contact me via WhatsApp or Email"
-      },
-      fr: {
-        "menu.home": "Accueil",
-        "menu.courses": "Cours",
-        "menu.videos": "Vidéos",
-        "menu.contact": "Contact",
-        "header.name": "Davidson Terane",
-        "header.desc": "Développeur d'extensions VS Code, Flutter & API Stripe – Plateforme éducative pour développeurs",
-        "header.cv": "📄 Télécharger le CV",
-        "courses.title": "Cours disponibles",
-        "courses.text": "Apprenez les extensions VS Code, l'API Stripe et Flutter avec des guides détaillés.",
-        "videos.title": "Vidéos sur YouTube",
-        "videos.button": "🔴 Voir la chaîne YouTube",
-        "contact.title": "Contactez-moi",
-        "contact.desc": "Vous pouvez me contacter par WhatsApp ou Email"
-      }
-    };
-
-    function setLang(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-    }
-  </script></body>
-                                          </html>
+  </footer></body>
+  </html>
