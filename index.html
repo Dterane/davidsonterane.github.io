@@ -1,139 +1,93 @@
-<!DOCTYPE html><html lang="ht">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Davidson TERANE</title>
-  <meta name="description" content="I don’t have a boss; I’m a freelancer — I sell my skills and passion in the global marketplace!">
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/111145512?v=4" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <title>Davidson TERANE | Independent Developer & Freelancer</title>
+  <meta name="description" content="Davidson TERANE | Independent Developer & Freelancer | I don't have a boss, I'm a freelancer — I sell my skills and passion on the global market!">
+  <meta property="og:title" content="Davidson TERANE | Independent Developer & Freelancer" />
+  <meta property="og:description" content="I don't have a boss, I'm a freelancer — I sell my skills and passion on the global market!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://davidsonterane.com" />
   <style>
-    :root {
-      --primary: #0ea5e9;
-      --primary-dark: #0284c7;
-      --background: #f9fafb;
-      --text: #1f2937;
-      --footer: #1f2937;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--background);
-      color: var(--text);
-      scroll-behavior: smooth;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 15px;
-    }
-    header h1 {
-      font-size: 1.8em;
-      margin: 10px 0;
-    }
-    header p {
-      font-size: 1em;
-      margin: 10px 0;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-      padding: 10px 20px;
-      margin: 0;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--primary-dark);
-      font-weight: 600;
-      font-size: 1em;
-    }
-    section {
-      padding: 50px 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    h2 {
-      color: var(--primary);
-      font-size: 1.5em;
-      margin-bottom: 20px;
-    }
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      transition: background 0.3s;
-    }
-    .btn-primary:hover {
-      background: var(--primary-dark);
-    }
-    footer {
-      background: var(--footer);
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-    }
-    .social a {
-      color: var(--primary);
-      margin: 0 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9fafb; color: #333; line-height: 1.6; }
+    header { background: #0a2540; color: #fff; text-align: center; padding: 40px 20px; }
+    header img { width: 80px; height: 80px; margin-bottom: 15px; }
+    header h1 { font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+    header p { font-size: 18px; }
+    .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+    h2 { color: #0a2540; font-size: 24px; margin-bottom: 15px; }
+    p { margin-bottom: 15px; font-size: 17px; }
+    .button { display: inline-block; background: #0a2540; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+    .button:hover { background: #1e3a5f; }
+    footer { text-align: center; padding: 20px; background: #0a2540; color: #fff; font-size: 14px; }
+    .services, .projects, .contact { margin-top: 40px; }
+    .card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 20px; }
+    .card h3 { color: #0a2540; margin-bottom: 10px; font-size: 20px; }
+    .social { margin-top: 20px; }
+    .social a { margin: 0 10px; color: #0a2540; font-weight: 600; text-decoration: none; }
+    .social a:hover { text-decoration: underline; }
   </style>
 </head>
-<body>  <nav>
-    <ul>
-      <li><a href="#home">Akèy</a></li>
-      <li><a href="#courses">Kou</a></li>
-      <li><a href="#videos">Videyo</a></li>
-      <li><a href="#contact">Kontakte</a></li>
-    </ul>
-  </nav>  <header id="home">
-    <img src="https://avatars.githubusercontent.com/u/111145512?v=4" alt="Davidson TERANE">
-    <h1>Davidson TERANE</h1>
-    <p>I don’t have a boss; I’m a freelancer — I sell my skills and passion in the global marketplace!</p>
-    <a href="#courses" class="btn-primary">Dekouvri Kou</a>
-  </header>  <section id="courses">
-    <h2>Kou ki disponib</h2>
-    <p>Aprann VS Code Extensions, Stripe API, Flutter, ak Devlopman Fullstack avèk kou pratik ak demonstrasyon pwojè reyèl.</p>
-    <a href="#contact" class="btn-primary">Enskri Kou</a>
-  </section>  <section id="videos">
-    <h2>Videyo sou YouTube</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLlQWn7wo17t3QgGZnc36oFgsHuVXJXiGb" title="YouTube video playlist Davidson TERANE" frameborder="0" allowfullscreen></iframe>
-    <br><br>
-    <a href="https://youtube.com/@TeraneDavidson" target="_blank" class="btn-primary">Ale sou YouTube</a>
-  </section>  <section id="contact">
-    <h2>Kontakte mwen</h2>
-    <p>Ou ka kontakte mwen sou WhatsApp oswa Imèl pou jwenn aksè rapid ak kou ak sipò teknik pèsonalize.</p>
-    <a href="mailto:davidsonterane@outlook.com" class="btn-primary">Imèl</a>
-    <a href="https://wa.me/qr/VIMRRJNAAP4AI1" class="btn-primary" target="_blank">WhatsApp</a>
-  </section>  <footer>
-    &copy; 2025 Davidson TERANE. Tout dwa rezève.<br>
-    <div class="social">
-      <a href="https://github.com/Dterane" target="_blank">GitHub</a>
-      <a href="https://facebook.com/TeraneDavidson" target="_blank">Facebook</a>
-      <a href="https://instagram.com/davidson.terane" target="_blank">Instagram</a>
-    </div>
-  </footer></body>
+<body>
+  <header>
+    <img src="https://files.catbox.moe/ff0qmo.png" alt="Davidson TERANE Logo" />
+    <h1>I am an independent developer</h1>
+    <p>I don't have a boss, I'm a freelancer — I sell my skills and passion on the global market!</p>
+  </header>
+
+  <div class="container">
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>Davidson TERANE</strong>, a passionate independent developer and freelancer with a decade of experience creating secure and scalable websites, apps, and digital solutions for businesses worldwide.</p>
+      <p>I don't have a boss, I'm a freelancer — I sell my skills and passion on the global market!</p>
+      <p>I help entrepreneurs, startups, and organizations bring their vision to life through clean, high-performing code and user-centered design.</p>
+      <a href="#contact" class="button">Hire Me</a>
+    </section>
+
+    <section class="services">
+      <h2>Services</h2>
+      <div class="card">
+        <h3>Custom Website Development</h3>
+        <p>From landing pages to full-stack applications using HTML, CSS, JavaScript, React, and modern frameworks.</p>
+      </div>
+      <div class="card">
+        <h3>WordPress & CMS Integration</h3>
+        <p>Clean, responsive, and SEO-optimized WordPress and CMS site development for your business.</p>
+      </div>
+      <div class="card">
+        <h3>Website Security & Optimization</h3>
+        <p>Security audits, SSL configuration, and site speed optimization to protect and enhance your online presence.</p>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Featured Projects</h2>
+      <div class="card">
+        <h3>Freelance Portfolio</h3>
+        <p>A responsive portfolio site showcasing services, contact forms, and project galleries for personal branding.</p>
+      </div>
+      <div class="card">
+        <h3>Business Landing Pages</h3>
+        <p>High-converting, clean landing pages designed to showcase services, capture leads, and convert visitors to clients.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <p>Ready to build your project? Contact me for a free consultation today!</p>
+      <a href="#" class="button">Send a Message</a>
+      <div class="social">
+        <a href="https://davidsonterane.com" target="_blank">Website</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Davidson TERANE. All rights reserved.
+  </footer>
+</body>
   </html>
